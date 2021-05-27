@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Imports and vars */
+
+$NavBG: rgb(65, 65, 65);
+$NavHOVER: rgb(77, 77, 77);
+$MainBG: rgb(222, 222, 222);
+$MonarkBG: #a0a0a0;
+$Font: Verdana, Geneva, Tahoma, sans-serif;
+
+/* SCSS */
+
+#root {
+  width: 1000px;
+  height: auto;
+  margin: 10px auto;
+}
+header {
+  nav {
+    width: 100%;
+    background-color: $NavBG;
+    ul {
+      list-style-type: none;
+      li {
+        padding: 15px;
+        display: inline-block;
+        border-right: 1px solid $NavHOVER;
+        a {
+          font-size: 17px;
+          text-decoration: none;
+          color: white;
+          font-family: $Font;
+        }
+        &:hover {
+          background-color: $NavHOVER;
+        }
+      }
+      li:last-child {
+        border: none;
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $MainBG;
+  font-family: $Font;
+  .monarkerList {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    gap: 20px;
+    .monarkL {
+      width: 100%;
+      height: max-content;
+      background-color: $MonarkBG;
+      display: grid;
+      grid-template-rows: 1fr 0.1fr;
+      .pictures {
+        max-width: auto;
+        height: 300px;
+        display: block;
+      }
+      .info {
+        padding: 10px;
+        p {
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .monark {
+    aside {
+      display: flex;
+      .monarkInfo {
+        margin-left: 20px;
+        .history {
+          display: inline-block;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  .search {
+    .searchChild {
+      padding: 20px;
+    }
+  }
+}
